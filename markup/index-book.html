@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books test</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+
+  <body>
+    <div style="display:none">
+      <include src="build/img/sprite_auto.svg"></include>
+    </div>
+
+    <header class="main-header">
+      <nav class="main-nav">
+        <div class="main-nav__wrapper">
+          <h1>Search for books</h1>
+          <div class="main-nav__search-wrapper">
+            <form>
+              <label for="id-search" class="visually-hidden">Форма поиска книг</label>
+              <input id="id-search" type="search" placeholder="Type here to search">
+              <button type="submit" aria-label="Кнопка поиска">
+                <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="#icon-magnifier"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+          <div class="main-nav__sort-wrapper">
+            <div class="main-nav__categories-wrapper categories">
+              <form class="categories__sorting" action="#" method="get">
+                <span class="categories__sorting-caption">Categories</span>
+                <span class="categories__sorting-type" tabindex="0">
+                  all
+                </span>
+                <ul class="categories__options categories__options--custom categories__options--closed">
+                  <li class="categories__option categories__option--active" tabindex="0">all</li>
+                  <li class="categories__option" tabindex="0">fantasy</li>
+                  <li class="categories__option" tabindex="0">programming</li>
+                  <li class="categories__option" tabindex="0">detective</li>
+                  <li class="categories__option" tabindex="0">music</li>
+                </ul>
+                <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="#icon-arrow"></use>
+                </svg>
+              </form>
+            </div>
+            <div class="main-nav__type-wrapper type">
+              <form class="type__sorting" action="#" method="get">
+                <span class="type__sorting-caption">Sorting by</span>
+                <span class="type__sorting-type" tabindex="0">
+                  relevance
+                </span>
+                <ul class="type__options type__options--custom type__options--closed">
+                  <li class="type__option type__option--active" tabindex="0">relevance</li>
+                  <li class="type__option" tabindex="0">name</li>
+                  <li class="type__option" tabindex="0">author</li>
+                </ul>
+                <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="#icon-arrow"></use>
+                </svg>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="main-page">
+      <div class="main-page__wrapper">
+        <img class="main-page__book-image" src="img/book.jpg" width="500" height="440" alt="Фото книги">
+        <div class="main-page__info-wrapper">
+          <p class="main-page__book-theme">Art/General</p>
+          <p class="main-page__book-name">JS open score</p>
+          <p class="main-page__book-author">Kendal Durelle</p>
+          <p class="main-page__book-description">An open score edition of Bach's Goldberg Variations.</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+    </footer>
+  </body>
+</html>

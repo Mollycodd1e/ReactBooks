@@ -13,142 +13,142 @@
       <include src="build/img/sprite_auto.svg"></include>
     </div>
 
-    <header class="main-header">
-      <nav class="main-nav">
-        <div class="main-nav__wrapper">
-          <h1>Search for books</h1>
-          <div class="main-nav__search-wrapper">
-            <form>
-              <label for="id-search" class="visually-hidden">Форма поиска книг</label>
-              <input id="id-search" type="search" placeholder="Type here to search">
-              <button type="submit" aria-label="Кнопка поиска">
-                <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="#icon-magnifier"></use>
-                </svg>
-              </button>
-            </form>
-          </div>
-          <div class="main-nav__sort-wrapper">
-            <div class="main-nav__categories-wrapper categories">
-              <form class="categories__sorting" action="#" method="get">
-                <span class="categories__sorting-caption">Categories</span>
-                <span class="categories__sorting-type" tabindex="0">
-                  all
-                </span>
-                <ul class="categories__options categories__options--custom categories__options--closed">
-                  <li class="categories__option categories__option--active" tabindex="0">all</li>
-                  <li class="categories__option" tabindex="0">fantasy</li>
-                  <li class="categories__option" tabindex="0">programming</li>
-                  <li class="categories__option" tabindex="0">detective</li>
-                  <li class="categories__option" tabindex="0">music</li>
-                </ul>
-                <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="#icon-arrow"></use>
-                </svg>
+    <div class="main__wrapper">
+      <header class="main-header">
+        <nav class="main-nav">
+          <div class="main-nav__wrapper">
+            <h1>Search for books</h1>
+            <div class="main-nav__search-wrapper">
+              <form>
+                <label for="id-search" class="visually-hidden">Форма поиска книг</label>
+                <input id="id-search" type="search" placeholder="Type here to search">
+                <button type="submit" aria-label="Кнопка поиска">
+                  <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="#icon-magnifier"></use>
+                  </svg>
+                </button>
               </form>
             </div>
-            <div class="main-nav__type-wrapper type">
-              <form class="type__sorting" action="#" method="get">
-                <span class="type__sorting-caption">Sorting by</span>
-                <span class="type__sorting-type" tabindex="0">
-                  relevance
-                </span>
-                <ul class="type__options type__options--custom type__options--closed">
-                  <li class="type__option type__option--active" tabindex="0">relevance</li>
-                  <li class="type__option" tabindex="0">name</li>
-                  <li class="type__option" tabindex="0">author</li>
-                </ul>
-                <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="#icon-arrow"></use>
-                </svg>
-              </form>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main class="main-page">
-      <h2 class="visually-hidden">Список найденных книг</h2>
-      <p class="main-page__count-information">Found 446 results</p>
-      <div class="main-page__books-list books__list tabs__content">
-        <article class="main-page__book-card book-card">
-          <div class="main-page__image-wrapper book-card__image-wrapper">
-            <a href="#">
-              <img class="book-card__image" src="img/book.jpg" width="160" height="200" alt="Book image">
-            </a>
-          </div>
-          <div class="book-card__info">
-            <div class="book-card__info-wrapper">
-              <div class="book-card__theme">
-                <span class="book-card__theme-text">Computers</span>
+            <div class="main-nav__sort-wrapper">
+              <div class="main-nav__categories-wrapper categories">
+                <form class="categories__sorting" action="#" method="get">
+                  <span class="categories__sorting-caption">Categories</span>
+                  <span class="categories__sorting-type" tabindex="0">
+                    all
+                  </span>
+                  <ul class="categories__options categories__options--custom categories__options--closed">
+                    <li class="categories__option categories__option--active" tabindex="0">all</li>
+                    <li class="categories__option" tabindex="0">fantasy</li>
+                    <li class="categories__option" tabindex="0">programming</li>
+                    <li class="categories__option" tabindex="0">detective</li>
+                    <li class="categories__option" tabindex="0">music</li>
+                  </ul>
+                </form>
               </div>
-              <div class="book-card__name">
-                <span class="book-card__name-text">Node.js Разработка серверных веб-приложений на JavaScript</span>
-              </div>
-              <div class="book-card__author">
-                <span class="book-card__name-text">Дэвид Херрон</span>
+              <div class="main-nav__type-wrapper type">
+                <form class="type__sorting" action="#" method="get">
+                  <span class="type__sorting-caption">Sorting by</span>
+                  <span class="type__sorting-type" tabindex="0">
+                    relevance
+                  </span>
+                  <ul class="type__options type__options--custom type__options--closed">
+                    <li class="type__option type__option--active" tabindex="0">relevance</li>
+                    <li class="type__option" tabindex="0">name</li>
+                    <li class="type__option" tabindex="0">author</li>
+                  </ul>
+                </form>
               </div>
             </div>
-        </article>
-        <article class="main-page__book-card book-card">
-          <div class="main-page__image-wrapper book-card__image-wrapper">
-            <a href="#">
-              <img class="book-card__image" src="img/book.jpg" width="160" height="200" alt="Book image">
-            </a>
           </div>
-          <div class="book-card__info">
-            <div class="book-card__info-wrapper">
-              <div class="book-card__theme">
-                <span class="book-card__theme-text">Computers</span>
-              </div>
-              <div class="book-card__name">
-                <span class="book-card__name-text">Node.js Путеводитель по технологиям</span>
-              </div>
-              <div class="book-card__author">
-                <span class="book-card__name-text">Кирилл Сухов</span>
+        </nav>
+      </header>
+      <main class="main-page">
+        <h2 class="visually-hidden">Список найденных книг</h2>
+        <p class="main-page__count-information">Found 446 results</p>
+        <div class="main-page__books-list books__list tabs__content">
+          <article class="main-page__book-card book-card">
+            <div class="main-page__image-wrapper book-card__image-wrapper">
+              <a href="index-book.html">
+                <img class="book-card__image" src="img/book.jpg" width="160" height="200" alt="Book image">
+              </a>
+            </div>
+            <div class="book-card__info">
+              <div class="book-card__info-wrapper">
+                <div class="book-card__theme">
+                  <span class="book-card__theme-text">Computers</span>
+                </div>
+                <div class="book-card__name">
+                  <span class="book-card__name-text">Node.js Разработка серверных веб-приложений на JavaScript</span>
+                </div>
+                <div class="book-card__author">
+                  <span class="book-card__name-text">Дэвид Херрон</span>
+                </div>
               </div>
             </div>
-        </article>
-        <article class="main-page__book-card book-card">
-          <div class="main-page__image-wrapper book-card__image-wrapper">
-            <a href="#">
-              <img class="book-card__image" src="img/book.jpg" width="160" height="200" alt="Book image">
-            </a>
-          </div>
-          <div class="book-card__info">
-            <div class="book-card__info-wrapper">
-              <div class="book-card__theme">
-                <span class="book-card__theme-text">Computers</span>
-              </div>
-              <div class="book-card__name">
-                <span class="book-card__name-text">Node.js в действии.2-е издание</span>
-              </div>
-              <div class="book-card__author">
-                <span class="book-card__name-text">Кантелон Майк, Хартер Марк, Головайчук TJ, Райлих Натан</span>
+          </article>
+          <article class="main-page__book-card book-card">
+            <div class="main-page__image-wrapper book-card__image-wrapper">
+              <a href="index-book.html">
+                <img class="book-card__image" src="img/book.jpg" width="160" height="200" alt="Book image">
+              </a>
+            </div>
+            <div class="book-card__info">
+              <div class="book-card__info-wrapper">
+                <div class="book-card__theme">
+                  <span class="book-card__theme-text">Computers</span>
+                </div>
+                <div class="book-card__name">
+                  <span class="book-card__name-text">Node.js Путеводитель по технологиям</span>
+                </div>
+                <div class="book-card__author">
+                  <span class="book-card__name-text">Кирилл Сухов</span>
+                </div>
               </div>
             </div>
-        </article>
-        <article class="main-page__book-card book-card">
-          <div class="main-page__image-wrapper book-card__image-wrapper">
-            <a href="#">
-              <img class="book-card__image" src="img/book.jpg" width="160" height="200" alt="Book image">
-            </a>
-          </div>
-          <div class="book-card__info">
-            <div class="book-card__info-wrapper">
-              <div class="book-card__theme">
-                <span class="book-card__theme-text">Computers</span>
-              </div>
-              <div class="book-card__name">
-                <span class="book-card__name-text">Vue.js в действии </span>
-              </div>
-              <div class="book-card__author">
-                <span class="book-card__name-text">Ханчетт Эрик, Листоун Бенджамин</span>
+          </article>
+          <article class="main-page__book-card book-card">
+            <div class="main-page__image-wrapper book-card__image-wrapper">
+              <a href="index-book.html">
+                <img class="book-card__image" src="img/book.jpg" width="160" height="200" alt="Book image">
+              </a>
+            </div>
+            <div class="book-card__info">
+              <div class="book-card__info-wrapper">
+                <div class="book-card__theme">
+                  <span class="book-card__theme-text">Computers</span>
+                </div>
+                <div class="book-card__name">
+                  <span class="book-card__name-text">Node.js в действии.2-е издание</span>
+                </div>
+                <div class="book-card__author">
+                  <span class="book-card__name-text">Кантелон Майк, Хартер Марк, Головайчук TJ, Райлих Натан</span>
+                </div>
               </div>
             </div>
-        </article>
-    </main>
-    <footer>
-    </footer>
+          </article>
+          <article class="main-page__book-card book-card">
+            <div class="main-page__image-wrapper book-card__image-wrapper">
+              <a href="index-book.html">
+                <img class="book-card__image" src="img/book.jpg" width="160" height="200" alt="Book image">
+              </a>
+            </div>
+            <div class="book-card__info">
+              <div class="book-card__info-wrapper">
+                <div class="book-card__theme">
+                  <span class="book-card__theme-text">Computers</span>
+                </div>
+                <div class="book-card__name">
+                  <span class="book-card__name-text">Vue.js в действии </span>
+                </div>
+                <div class="book-card__author">
+                  <span class="book-card__name-text">Ханчетт Эрик, Листоун Бенджамин</span>
+                </div>
+              </div>
+            </div>
+          </article>
+      </main>
+      <footer>
+      </footer>
+    </div>
   </body>
 </html>

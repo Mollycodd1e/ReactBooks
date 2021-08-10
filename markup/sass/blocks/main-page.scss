@@ -6,6 +6,38 @@
   color: #000000;
 }
 
+.main-page__wrapper {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+}
+
+.main-page__book-theme {
+  margin: 0;
+  font-size: 14px;
+  color: #808080;
+}
+
+.main-page__book-name {
+  margin: 0;
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.main-page__book-author {
+  margin: 0;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #808080;
+}
+
+.main-page__book-description {
+  margin: 0;
+  margin-top: 50px;
+  font-size: 18px;
+}
+
 .main-page__image-wrapper a {
   display: block;
 }
