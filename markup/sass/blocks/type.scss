@@ -4,15 +4,15 @@
 }
 
 .type__sorting-type {
-  position:relative;
+  position: relative;
   width: 150px;
   margin-left: 5px;
   padding: 12px 10px;
-  font-size:18px;
+  font-size: 18px;
   line-height:1.2;
   background-color: #ffffff;
   color: #808080;
-  cursor:pointer
+  cursor: pointer
 }
 
 .type__sorting-caption {
@@ -25,13 +25,20 @@
 }
 
 .type__options {
-  margin:0;
-  padding:0;
-  list-style:none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   background-color:#ffffff;
   border:1px solid #dfdfdf;
   border-radius:4px;
   color: #808080;
+}
+
+.type__options li {
+  font-size: 18px;
+  line-height: 36px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .type__option--active {
@@ -40,12 +47,22 @@
 }
 
 .type__options--custom {
-  position:absolute;
-  top: calc(100% + 1px);
-  left:52px;
-  z-index:1;
+  position: absolute;
+  left: 52px;
+  z-index: 1;
   background-color: #ffffff;
-  display:none;
+}
+
+.type__options--closed {
+  display: none;
+}
+
+.type__options--opened {
+  display: block;
+  top: 0;
+  left: 87px;
+  border-radius: 0;
+  width: 170px;
 }
 
 .type__sorting svg {
