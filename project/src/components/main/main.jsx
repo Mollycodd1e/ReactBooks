@@ -1,62 +1,10 @@
 import React from 'react';
+import Header from '../header/header';
 
 function Main () {
   return (
     <div className="main__wrapper">
-      <header className="main-header">
-        <nav className="main-nav">
-          <div className="main-nav__wrapper">
-            <h1>Search for books</h1>
-            <div className="main-nav__search-wrapper">
-              <form>
-                <label forhtml="id-search" className="visually-hidden">Форма поиска книг</label>
-                <input id="id-search" type="search" placeholder="Type here to search"/>
-                <button type="submit" aria-label="Кнопка поиска">
-                  <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                    <use xlinkHref="#icon-magnifier"></use>
-                  </svg>
-                </button>
-              </form>
-            </div>
-            <div className="main-nav__sort-wrapper">
-              <div className="main-nav__categories-wrapper categories">
-                <form className="categories__sorting" action="#" method="get">
-                  <span className="categories__sorting-caption">Categories</span>
-                  <span className="categories__sorting-type" tabIndex="0">
-                    all
-                  </span>
-                  <ul className="categories__options categories__options--custom categories__options--closed">
-                    <li className="categories__option categories__option--active" tabIndex="0">all</li>
-                    <li className="categories__option" tabIndex="0">fantasy</li>
-                    <li className="categories__option" tabIndex="0">programming</li>
-                    <li className="categories__option" tabIndex="0">detective</li>
-                    <li className="categories__option" tabIndex="0">music</li>
-                  </ul>
-                  <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                    <use xlinkHref="#icon-arrow"></use>
-                  </svg>
-                </form>
-              </div>
-              <div className="main-nav__type-wrapper type">
-                <form className="type__sorting" action="#" method="get">
-                  <span className="type__sorting-caption">Sorting by</span>
-                  <span className="type__sorting-type" tabIndex="0">
-                    relevance
-                  </span>
-                  <ul className="type__options type__options--custom type__options--closed">
-                    <li className="type__option type__option--active" tabIndex="0">relevance</li>
-                    <li className="type__option" tabIndex="0">name</li>
-                    <li className="type__option" tabIndex="0">author</li>
-                  </ul>
-                  <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                    <use xlinkHref="#icon-arrow"></use>
-                  </svg>
-                </form>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </header>
+      <Header />
       <main className="main-page">
         <h2 className="visually-hidden">Список найденных книг</h2>
         <p className="main-page__count-information">Found 446 results</p>
