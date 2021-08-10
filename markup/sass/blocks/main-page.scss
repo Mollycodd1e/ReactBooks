@@ -55,6 +55,7 @@
 
 .main-page__books-list {
   display: flex;
+  flex-wrap: wrap;
   max-width: 1170px;
   margin: 0 auto;
   margin-top: 50px;

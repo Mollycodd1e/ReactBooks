@@ -1,6 +1,10 @@
 import React from 'react';
+//import PropTypes from 'prop-types';
 
-function Book() {
+function Book(props) {
+
+  //const {book} = props;
+
   return (
     <article className="main-page__book-card book-card">
       <div className="main-page__image-wrapper book-card__image-wrapper">
@@ -11,18 +15,22 @@ function Book() {
       <div className="book-card__info">
         <div className="book-card__info-wrapper">
           <div className="book-card__theme">
-            <span className="book-card__theme-text">Computers</span>
+            <span className="book-card__theme-text">book</span>
           </div>
           <div className="book-card__name">
             <span className="book-card__name-text">Node.js Разработка серверных веб-приложений на JavaScript</span>
           </div>
           <div className="book-card__author">
-            <span className="book-card__name-text">Дэвид Херрон</span>
+            <span className="book-card__name-text">2</span>
           </div>
         </div>
       </div>
     </article>
   );
 }
+
+//Book.propTypes = {
+//  book: PropTypes.object.isRequired,
+//};
 
 export default Book;
