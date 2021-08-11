@@ -3,8 +3,12 @@
   width: 23%;
 }
 
-.book-card:nth-child(4n+ 1) {
+.book-card:nth-child(4n + 1) {
   margin-left: 0;
+}
+
+.book-card:nth-child(n + 5) {
+  margin-top: 50px;
 }
 
 .book-card__info {
