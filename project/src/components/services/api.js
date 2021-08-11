@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BACKEND_URL = 'https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=AIzaSyCTAwPNcTkfNKkIVdr0j05c-DYLm-k7LF0';
+const BACKEND_URL = 'https://www.googleapis.com/books';
 const REQUEST_TIMEOUT = 5000;
 
 export const createAPI = () => {

@@ -3,6 +3,11 @@
   width: 23%;
 }
 
+.book-card:hover,
+.book-card:focus {
+  background-color: #ccc4c4;
+}
+
 .book-card:nth-child(4n + 1) {
   margin-left: 0;
 }

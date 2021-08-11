@@ -7,15 +7,16 @@ import reducer from './store/reducer';
 import {fetchBooks} from './store/api-action';
 import {createAPI} from './components/services/api';
 
-const store = configureStore({reducer: reducer, middleware: (getDefaultMiddleware) =>
+export const store = configureStore({reducer: reducer, middleware: (getDefaultMiddleware) =>
   getDefaultMiddleware({
     thunk: {
-      extraArgument: createAPI(),
+      extraArgument: createAPI(
+        () => store.dispatch(fetchBooks())),
     },
   }),
 });
 
-store.dispatch(fetchBooks());
+store.dispatch(fetchBooks('music'));
 
 ReactDOM.render(
   <React.StrictMode>

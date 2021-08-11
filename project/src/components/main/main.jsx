@@ -19,7 +19,7 @@ function Main () {
             <p className="main-page__count-information">Found {booksList.length} results</p>
             <div className="main-page__books-list books__list tabs__content">
               {booksList.map((book) =>
-                <Book key={book} book={book}/>)}
+                <Book key={book.id} book={book}/>)}
             </div>
           </div> : <MainEmpty />}
       </main>

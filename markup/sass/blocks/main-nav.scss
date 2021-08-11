@@ -22,8 +22,8 @@
 
 .main-nav__search-wrapper svg {
   position: absolute;
-  top: 35%;
-  right: 10px;
+  top: 25%;
+  right: 13px;
   cursor: pointer;
 }
 
@@ -35,10 +35,15 @@
 .main-nav__search-wrapper button {
   position: absolute;
   right: 0;
-  height: 24px;
+  height: 30px;
   width: 40px;
   border: none;
   cursor: pointer;
+}
+
+.main-nav__search-wrapper button:hover,
+.main-nav__search-wrapper button:hover {
+  background-color: #ccc4c4;
 }
 
 .main-nav__search-wrapper input {
@@ -51,6 +56,16 @@
   font-family: $poppins;
   font-size: 14px;
   cursor: pointer;
+}
+
+.main-nav__search-wrapper input:hover,
+.main-nav__search-wrapper input:focus {
+  background-color: #ccc4c4;
+}
+
+.main-nav__search-wrapper input:hover::placeholder,
+.main-nav__search-wrapper input:focus::placeholder {
+  color: #000000;
 }
 
 .main-nav__sort-wrapper {

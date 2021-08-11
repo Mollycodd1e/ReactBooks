@@ -9,19 +9,22 @@ function Book(props) {
     <article className="main-page__book-card book-card">
       <div className="main-page__image-wrapper book-card__image-wrapper">
         <a href="index-book.html">
-          <img className="book-card__image" src={book.volumeInfo.imageLinks.thumbnail} width="160" height="200" alt="Book image"/>
+          {book.volumeInfo.imageLinks === undefined ? <img className="book-card__image" src="#" width="160" height="200" alt="Book image"/> :
+            <img className="book-card__image" src={book.volumeInfo.imageLinks.thumbnail} width="160" height="200" alt="Book image"/>}
         </a>
       </div>
       <div className="book-card__info">
         <div className="book-card__info-wrapper">
           <div className="book-card__theme">
-            <span className="book-card__theme-text">{book.volumeInfo.categories.map((item) => item).join(', ')}</span>
+            {book.volumeInfo.categories === undefined ? '' :
+              <span className="book-card__theme-text">{book.volumeInfo.categories.map((item) => item).join(', ')}</span>}
           </div>
           <div className="book-card__name">
             <span className="book-card__name-text">{book.volumeInfo.title}</span>
           </div>
           <div className="book-card__author">
-            <span className="book-card__name-text">{book.volumeInfo.authors.map((author) => author).join(', ')}</span>
+            {book.volumeInfo.authors === undefined ? <span className="book-card__name-text">Unknown</span> :
+              <span className="book-card__name-text">{book.volumeInfo.authors.map((author) => author).join(', ')}</span>}
           </div>
         </div>
       </div>
