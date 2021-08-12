@@ -1,13 +1,16 @@
 export const CategoriesList = {
   ALL: 'all',
-  FANTASY: 'fantasy',
-  PROGRAMMING: 'programming',
-  DETECTIVE: 'detective',
-  MUSIC: 'music',
+  ART: 'Art',
+  COMPUTERS: 'Computers',
+  BIOGRAPHY: 'Biography & Autobiography',
+  HISTORY: 'History',
+  MEDICAL: 'Medical',
+  POETRY: 'Poetry',
 };
 
 export const TypeList = {
   RELEVANCE: 'relevance',
   TITLE: 'title',
+  NEWEST: 'newest',
   AUTHOR: 'author',
 };

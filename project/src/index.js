@@ -16,8 +16,6 @@ export const store = configureStore({reducer: reducer, middleware: (getDefaultMi
   }),
 });
 
-store.dispatch(fetchBooks('music'));
-
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

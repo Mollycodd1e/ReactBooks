@@ -2,15 +2,24 @@ import React from 'react';
 import CategoriesSortList from '../categories-sort-list/categories-sort-list';
 import TypeSortList from '../type-sort-list/type-sort-list';
 import {fetchBooks} from '../../store/api-action';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
+import { getCategories } from '../../store/changer/selector';
+import { CategoriesList } from '../../const';
 
 function Header() {
 
   const dispatch = useDispatch();
 
+  const activeCategories = useSelector(getCategories);
+
   const handleSubmitClick = (evt, value) => {
-    evt.preventDefault();
-    dispatch(fetchBooks(value));
+    if (activeCategories !== CategoriesList.ALL) {
+      evt.preventDefault();
+      dispatch(fetchBooks(value, activeCategories));
+    } else {
+      evt.preventDefault();
+      dispatch(fetchBooks(value, ''));
+    }
   };
 
   return (
