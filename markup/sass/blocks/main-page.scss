@@ -72,8 +72,13 @@
   margin-left: auto;
   margin-top: 30px;
   width: 270px;
-  background-color: #ccc4c4;
+  background-color: #dfdfdf;
   border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ccc4c4;
+  }
 }
 
 @media (max-width: 1050px) {

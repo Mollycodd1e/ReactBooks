@@ -15,10 +15,10 @@ function Header() {
   const handleSubmitClick = (evt, value) => {
     if (activeCategories !== CategoriesList.ALL) {
       evt.preventDefault();
-      dispatch(fetchBooks(value, activeCategories));
+      dispatch(fetchBooks(value, activeCategories, 'startIndex=1'));
     } else {
       evt.preventDefault();
-      dispatch(fetchBooks(value, ''));
+      dispatch(fetchBooks(value, '', 'startIndex=1'));
     }
   };
 

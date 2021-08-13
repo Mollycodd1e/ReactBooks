@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 
 function Book(props) {
 
@@ -8,10 +9,10 @@ function Book(props) {
   return (
     <article className="main-page__book-card book-card">
       <div className="main-page__image-wrapper book-card__image-wrapper">
-        <a href="index-book.html">
+        <Link to="/index-book.html">
           {book.volumeInfo.imageLinks === undefined ? <img className="book-card__image" src="#" width="160" height="200" alt="Book image"/> :
             <img className="book-card__image" src={book.volumeInfo.imageLinks.thumbnail} width="160" height="200" alt="Book image"/>}
-        </a>
+        </Link>
       </div>
       <div className="book-card__info">
         <div className="book-card__info-wrapper">

@@ -4,6 +4,7 @@ import {loadBooks} from '../action';
 const initialState = {
   books: {},
   isDataLoaded: false,
+  inputText: '',
 };
 
 const data = createReducer(initialState, (builder) => {

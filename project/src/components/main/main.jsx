@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import { CategoriesList } from '../../const';
-import { fetchBooks } from '../../store/api-action';
+import {CategoriesList} from '../../const';
+import {fetchBooks} from '../../store/api-action';
 import {getCategories, getType} from '../../store/changer/selector';
-import {getBooks} from '../../store/data/selector';
+import {getBooks, getInputText} from '../../store/data/selector';
 import {getSortedBooksByType} from '../../utils';
 import Book from '../book/book';
 import Header from '../header/header';
@@ -15,15 +15,22 @@ function Main () {
 
   const dispatch = useDispatch();
 
+  const [count, setCount] = useState(1);
   const activeCategories = useSelector(getCategories);
   const activeType = useSelector(getType);
+  const inputText = useSelector(getInputText);
 
   const sortedBooksByTypes = getSortedBooksByType(activeType, booksList);
 
-  const handleSubmitClick = (evt, value) => {
+  const handleSubmitClick = (evt) => {
     if (activeCategories !== CategoriesList.ALL) {
       evt.preventDefault();
-      dispatch(fetchBooks(value, activeCategories));
+      dispatch(fetchBooks(`${inputText}`, activeCategories, `startIndex=${count*31}`));
+      setCount(count + 1);
+    } else {
+      evt.preventDefault();
+      dispatch(fetchBooks(`${inputText}`, '', `startIndex=${count*31}`));
+      setCount(count + 1);
     }
   };
 
@@ -40,7 +47,8 @@ function Main () {
                 <Book key={book.id} book={book}/>)}
             </div>
           </div> : <MainEmpty />}
-        <button type="button" className="main-page__load-more-button" onClick={handleSubmitClick}>Load more</button>
+        {sortedBooksByTypes.length > 0 ?
+          <button type="button" className="main-page__load-more-button" onClick={handleSubmitClick}>Load more</button> : <div></div>}
       </main>
       <footer>
       </footer>
