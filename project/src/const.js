@@ -14,3 +14,5 @@ export const TypeList = {
   NEWEST: 'newest',
   AUTHOR: 'author',
 };
+
+export const API_KEY = 'AIzaSyCTAwPNcTkfNKkIVdr0j05c-DYLm-k7LF0';

@@ -3,8 +3,8 @@ import CategoriesSortList from '../categories-sort-list/categories-sort-list';
 import TypeSortList from '../type-sort-list/type-sort-list';
 import {fetchBooks} from '../../store/api-action';
 import {useDispatch, useSelector} from 'react-redux';
-import { getCategories } from '../../store/changer/selector';
-import { CategoriesList } from '../../const';
+import {getCategories} from '../../store/changer/selector';
+import {CategoriesList} from '../../const';
 
 function Header() {
 
@@ -12,7 +12,7 @@ function Header() {
 
   const activeCategories = useSelector(getCategories);
 
-  const handleSubmitClick = (evt, value) => {
+  const handleSubmitClick = (evt, value = {}) => {
     if (activeCategories !== CategoriesList.ALL) {
       evt.preventDefault();
       dispatch(fetchBooks(value, activeCategories, 'startIndex=1'));

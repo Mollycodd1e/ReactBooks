@@ -13,6 +13,19 @@
   justify-content: space-between;
 }
 
+.main-page__wrapper--book-info {
+  flex-direction: row;
+}
+
+.main-page__wrapper--book-info img {
+  display: block;
+  min-width: 440px;
+}
+
+.main-page__info-wrapper {
+  margin-left: 5%;
+}
+
 .main-page__book-theme {
   margin: 0;
   font-size: 14px;
@@ -96,5 +109,17 @@
   .main-page {
     padding-left: 4.7%;
     padding-right: 4.7%;
+  }
+
+  .main-page__wrapper--book-info img {
+    min-width: 160px;
+    width: 160px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 450px) {
+  .main-page__wrapper {
+    flex-direction: column;
   }
 }
