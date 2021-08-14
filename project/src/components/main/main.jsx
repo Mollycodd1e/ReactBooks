@@ -8,8 +8,11 @@ import {getSortedBooksByType} from '../../utils';
 import Book from '../book/book';
 import Header from '../header/header';
 import MainEmpty from '../main-empty/main-empty';
+import PropTypes from 'prop-types';
 
-function Main () {
+function Main (props) {
+
+  const {onBookHover} = props;
 
   const booksList = Array.from(useSelector(getBooks));
 
@@ -44,7 +47,7 @@ function Main () {
             <p className="main-page__count-information">Found {sortedBooksByTypes.length} results</p>
             <div className="main-page__books-list books__list tabs__content">
               {sortedBooksByTypes.map((book) =>
-                <Book key={book.id} book={book}/>)}
+                <Book key={book.id} book={book} onBookHover={onBookHover}/>)}
             </div>
           </div> : <MainEmpty />}
         {sortedBooksByTypes.length > 0 ?
@@ -55,5 +58,9 @@ function Main () {
     </div>
   );
 }
+
+Main.propTypes = {
+  onBookHover: PropTypes.func,
+};
 
 export default Main;

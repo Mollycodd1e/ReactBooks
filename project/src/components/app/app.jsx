@@ -1,25 +1,22 @@
-import React from 'react';
-//import {useDispatch} from 'react-redux';
-import {useSelector} from 'react-redux';
+import React, {useState} from 'react';
 import {Switch, Route} from 'react-router-dom';
-//import {fetchBooks} from '../../store/api-action';
-import {getBooks} from '../../store/data/selector';
 import BookInfo from '../book-info/book-info';
 import Main from '../main/main';
 
 function App() {
-  //const dispatch = useDispatch();
+  const [activeBook, setActiveBook] = useState();
 
-  //dispatch(fetchBooks('', '', 'startIndex=1'));
+  const handleBookHover = (book) => {
+    setActiveBook(book);
+  };
 
-  const booksList = Array.from(useSelector(getBooks));
   return (
     <Switch>
       <Route exact path={'/'}>
-        <Main />
+        <Main onBookHover={handleBookHover}/>
       </Route>
       <Route exact path={'/index-book.html'}>
-        <BookInfo book={booksList[0]}/>
+        <BookInfo book={activeBook}/>
       </Route>
     </Switch>
   );

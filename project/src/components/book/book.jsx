@@ -4,10 +4,22 @@ import {Link} from 'react-router-dom';
 
 function Book(props) {
 
-  const {book} = props;
+  const {book, onBookHover} = props;
+
+  const handleMouseEnter = () => {
+    if (onBookHover) {
+      onBookHover(book);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (onBookHover) {
+      onBookHover(null);
+    }
+  };
 
   return (
-    <article className="main-page__book-card book-card">
+    <article className="main-page__book-card book-card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <div className="main-page__image-wrapper book-card__image-wrapper">
         <Link to="/index-book.html">
           {book.volumeInfo.imageLinks === undefined ? <img className="book-card__image" src="#" width="160" height="200" alt="Book image"/> :
@@ -34,6 +46,7 @@ function Book(props) {
 }
 
 Book.propTypes = {
+  onBookHover: PropTypes.func,
   book: PropTypes.object.isRequired,
 };
 
