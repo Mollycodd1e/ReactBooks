@@ -7,6 +7,7 @@ import configureStore from 'redux-mock-store';
 import App from './app.jsx';
 import thunk from 'redux-thunk'
 import {createAPI} from '../services/api.js';
+import {AppRoute} from '../../const.js';
 
 let history = null;
 let store = null;
@@ -15,28 +16,22 @@ let api = null;
 api = createAPI(() => {});
 const createFakeStore = configureStore([thunk.withExtraArgument(api)]);
 
-const MOCK_BOOKS = {
-  items: {
-    0: {
-      volumeInfo: '',
-      categories: ['1'],
-      description: '',
-      authors: ['1', '2'],
-    },
-    1: {
-      volumeInfo: '',
-      categories: ['1'],
-      description: '',
-      authors: ['1', '2'],
-    },
-    2: {
-      volumeInfo: '',
-      categories: ['1'],
-      description: '',
-      authors: ['1', '2'],
-    }
+const MOCK_BOOKS = [{
+  volumeInfo: {
+    categories: ['Computers'],
+    title: 'JavaScript',
+    description: 'About JS',
+    authors: ['Ivan'],
+    imageLinks: undefined,
+  },
+  volumeInfo: {
+    categories: ['Music'],
+    title: 'Morgenshtern',
+    description: 'whatta',
+    authors: ['who'],
+    imageLinks: undefined,
   }
-};
+}];
 
 
 describe('Application Routing', () => {
@@ -44,7 +39,7 @@ describe('Application Routing', () => {
     history = createMemoryHistory();
 
     store = createFakeStore({
-      DATA: {books: (Array.from(MOCK_BOOKS.items)).map((item) => item), isDataLoaded: true},
+      DATA: {books: (MOCK_BOOKS), isDataLoaded: true},
       CHANGER: {activeCategories: 'all', activeType: 'relevance'},
     });
 
@@ -58,7 +53,7 @@ describe('Application Routing', () => {
   });
 
   it('should render "Main" when user navigate to "/"', () => {
-    history.push('/');
+    history.push(AppRoute.MAIN);
     render(fakeApp);
 
     expect(screen.getByText(/No books found/i)).toBeInTheDocument();

@@ -19,7 +19,7 @@ function Book(props) {
   };
 
   return (
-    <article className="main-page__book-card book-card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <article className="main-page__book-card book-card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} aria-label='article'>
       <div className="main-page__image-wrapper book-card__image-wrapper">
         <Link to="/index-book.html">
           {book.volumeInfo.imageLinks === undefined ? <img className="book-card__image" src="#" width="160" height="200" alt="Book image"/> :

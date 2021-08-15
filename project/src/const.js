@@ -15,4 +15,9 @@ export const TypeList = {
   AUTHOR: 'author',
 };
 
+export const AppRoute = {
+  MAIN: '/',
+  BOOK: '/index-book.html',
+};
+
 export const API_KEY = 'AIzaSyCTAwPNcTkfNKkIVdr0j05c-DYLm-k7LF0';

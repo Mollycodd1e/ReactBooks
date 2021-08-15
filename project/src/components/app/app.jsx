@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Switch, Route} from 'react-router-dom';
+import {AppRoute} from '../../const';
 import BookInfo from '../book-info/book-info';
 import Main from '../main/main';
 
@@ -12,10 +13,10 @@ function App() {
 
   return (
     <Switch>
-      <Route exact path={'/'}>
+      <Route exact path={AppRoute.MAIN}>
         <Main onBookHover={handleBookHover}/>
       </Route>
-      <Route exact path={'/index-book.html'}>
+      <Route exact path={AppRoute.BOOK}>
         <BookInfo book={activeBook}/>
       </Route>
     </Switch>
